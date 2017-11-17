@@ -23,6 +23,7 @@ Game.setBackdrop("#333");
 var cells = [];
 var dragging = false;
 
+//this is the array used to save cancer cells
 var origin = [];
 
 
@@ -36,12 +37,12 @@ for(var y=0; y<W; y++) {
         cell.y = 103.6*y;
 
         // 初始化的位置
-        cell.orignX = 120*x;
-        cell.orignY = 103.6*y;
+        cell.originX = 120*x;
+        cell.originY = 103.6*y;
 
         if (y%2 == 0) {
             cell.x += 60;
-            cell.orignX += 60;
+            cell.originX += 60;
         }
 
         cells.push(cell);
@@ -61,20 +62,24 @@ Game.when("mousedown", function () {
 Game.when("mouseup", function () {
     dragging = false;
     for(var i=0; i<cells.length; i++) {
-        cells[i].orignX = cells[i].x;
-        cells[i].orignY = cells[i].y;
+        cells[i].originX = cells[i].x;
+        cells[i].originY = cells[i].y;
     }
 
     for (var i = 0; i < towers.length; i++) {
-        towers[i].orignX = towers[i].x;
-        towers[i].orignY = towers[i].y;
+        towers[i].originX = towers[i].x;
+        towers[i].originY = towers[i].y;
     }
 
     var tmp = cells[0].x;
     if (tmp > 100) {
         for (var x=0; x<cells.length; x++) {
             cells[x].x -= tmp - 100; 
-            cells[x].orignX -= tmp - 100;
+            cells[x].originX -= tmp - 100;
+        }
+        for (var i = 0; i < towers.length; i++) {
+            towers[i].x -= tmp - 100; 
+            towers[i].originX -= tmp - 100;
         }
     }
 
@@ -82,7 +87,11 @@ Game.when("mouseup", function () {
     if (tmp > 100) {
         for (var x=0; x<cells.length; x++) {
             cells[x].y -= tmp - 100; 
-            cells[x].orignY -= tmp - 100;
+            cells[x].originY -= tmp - 100;
+        }
+        for (var i = 0; i < towers.length; i++) {
+            towers[i].y -= tmp - 100; 
+            towers[i].originY -= tmp - 100;
         }
     }
 
@@ -90,7 +99,11 @@ Game.when("mouseup", function () {
     if (tmp < width-100) {
         for (var x=0; x<cells.length; x++) {
             cells[x].x += width - 100 - tmp; 
-            cells[x].orignX += width - 100 - tmp;
+            cells[x].originX += width - 100 - tmp;
+        }
+        for (var i = 0; i < towers.length; i++) {
+            towers[i].x += width - 100 - tmp; 
+            towers[i].originX += width - 100 - tmp;
         }
     }
 
@@ -98,7 +111,11 @@ Game.when("mouseup", function () {
     if (tmp < height-100) {
         for (var x=0; x<cells.length; x++) {
             cells[x].y += height - 100 - tmp; 
-            cells[x].orignY += height - 100 - tmp;
+            cells[x].originY += height - 100 - tmp;
+        }
+        for (var i = 0; i < towers.length; i++) {
+            towers[i].x += width - 100 - tmp; 
+            towers[i].originX += width - 100 - tmp;
         }
     }
 });
@@ -112,13 +129,13 @@ Game.forever(function () {
 
 
         for(var i=0; i<cells.length; i++) {
-            cells[i].x = cells[i].orignX + offsetX;
-            cells[i].y = cells[i].orignY + offsetY;
+            cells[i].x = cells[i].originX + offsetX;
+            cells[i].y = cells[i].originY + offsetY;
         }
 
         for (var i = 0; i < towers.length; i++) {
-            towers[i].x = towers[i].orignX + offsetX;
-            towers[i].y = towers[i].orignY + offsetY;
+            towers[i].x = towers[i].originX + offsetX;
+            towers[i].y = towers[i].originY + offsetY;
         }
     }
 
