@@ -65,6 +65,11 @@ Game.when("mouseup", function () {
         cells[i].orignY = cells[i].y;
     }
 
+    for (var i = 0; i < towers.length; i++) {
+        towers[i].orignX = towers[i].x;
+        towers[i].orignY = towers[i].y;
+    }
+
     var tmp = cells[0].x;
     if (tmp > 100) {
         for (var x=0; x<cells.length; x++) {
@@ -110,6 +115,11 @@ Game.forever(function () {
             cells[i].x = cells[i].orignX + offsetX;
             cells[i].y = cells[i].orignY + offsetY;
         }
+
+        for (var i = 0; i < towers.length; i++) {
+            towers[i].x = towers[i].orignX + offsetX;
+            towers[i].y = towers[i].orignY + offsetY;
+        }
     }
 
     for(var i=0; i< origin.length; i++){
@@ -140,3 +150,15 @@ Game.forever(function () {
         }
     }
 });
+    
+    var zoom = 50;
+    $('#scroll-input').change(function () {
+        var val = $(this).val();
+        Game.set({
+            width: width*(val/zoom),
+            height: height*(val/zoom),
+            zoom: 50/val
+        });
+    }) 
+
+$("#story").modal();
