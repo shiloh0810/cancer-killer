@@ -1,7 +1,8 @@
 var towers = [];
 
 function buildTower(key) {
-    var tower = Game.createSprite("assets/fire.png");
+    var tower = Game.createSprite(["assets/fire.png", "assets/icecube.png", "assets/knife.png", "assets/happy-liver.png", "assets/shot.png", "assets/light.png", "assets/tower.png", "assets/y-90.png", "assets/dish.png"]);
+    tower.costumeId = key;
     tower.originX = tower.x;
     tower.originY = tower.y;
     towers.push(tower);
