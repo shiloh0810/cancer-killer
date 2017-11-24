@@ -7,6 +7,12 @@ var cursor = Game.cursor;
 var width = $(window).width();
 var height = $(window).height();
 
+//健康值 0~1000;
+//<0 -> game over
+// wouldn't exceed 1000
+
+var health = 1000; 
+
 Game.set({
     width: width, // Default: 640px
     height: height, // Default: 480px
@@ -167,7 +173,18 @@ Game.forever(function () {
         }
     }
 });
-    
+
+Game.forever(function(){
+    var percent = health / 10;
+    $("#health").width(percent + '%');
+    if (health<=0){
+        Game.stop();
+        alert ("Game over");
+    };
+
+});
+
+
     var zoom = 50;
     $('#scroll-input').change(function () {
         var val = $(this).val();

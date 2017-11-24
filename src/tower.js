@@ -6,6 +6,7 @@ function buildTower(key) {
     tower.originX = tower.x;
     tower.originY = tower.y;
     towers.push(tower);
+    health -= 100;
 }
 
 Game.when("mousedown", function () {
