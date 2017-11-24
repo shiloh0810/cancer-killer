@@ -72,26 +72,26 @@ Game.when("mouseup", function () {
     }
 
     var tmp = cells[0].x;
-    if (tmp > 100) {
+    if (tmp > 800) {
         for (var x=0; x<cells.length; x++) {
-            cells[x].x -= tmp - 100; 
-            cells[x].originX -= tmp - 100;
+            cells[x].x -= tmp - 800; 
+            cells[x].originX -= tmp - 800;
         }
         for (var i = 0; i < towers.length; i++) {
-            towers[i].x -= tmp - 100; 
-            towers[i].originX -= tmp - 100;
+            towers[i].x -= tmp - 800; 
+            towers[i].originX -= tmp - 800;
         }
     }
 
     var tmp = cells[0].y;
-    if (tmp > 100) {
+    if (tmp > 800) {
         for (var x=0; x<cells.length; x++) {
-            cells[x].y -= tmp - 100; 
-            cells[x].originY -= tmp - 100;
+            cells[x].y -= tmp - 800; 
+            cells[x].originY -= tmp - 800;
         }
         for (var i = 0; i < towers.length; i++) {
-            towers[i].y -= tmp - 100; 
-            towers[i].originY -= tmp - 100;
+            towers[i].y -= tmp - 800; 
+            towers[i].originY -= tmp - 800;
         }
     }
 
@@ -178,4 +178,4 @@ Game.forever(function () {
         });
     }) 
 
-$("#story").modal();
+$("#knowledge").modal();
