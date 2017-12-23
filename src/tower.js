@@ -6,16 +6,62 @@ function buildTower(key) {
     tower.originX = tower.x;
     tower.originY = tower.y;
     towers.push(tower);
-    health -= 100;
+    
+
+    if (key == 0) {
+        tower.forever(function () {
+            var tower = this;
+
+            for (var j = 0; j < origin.length; j++) {
+
+                if (tower.distanceTo(origin[j]) < 400) {
+                    origin[j].scale -= 0.008;
+                    if (origin[j].scale < 0) {
+                        origin[j].scale = 0;
+                        
+                    }
+                }
+            }
+        });
+        setTimeout(function(){
+            tower.destroy();
+        }, 12000);
+
+        health -= 100;
+
+    };
+
+    if(key == 1) {
+        tower.forever(function () {
+            var tower = this;
+
+            for (var j = 0; j < origin.length; j++) {
+
+                if (tower.distanceTo(origin[j]) < 600) {
+                    origin[j].scale -= 0.008;
+                    if (origin[j].scale < 0) {
+                        origin[j].scale = 0;
+                        
+                    }
+                }
+            }
+        });
+        setTimeout(function(){
+            tower.destroy();
+        }, 12000);
+
+        health -= 200;
+
+    }
 }
 
 Game.when("mousedown", function () {
 
 });
 
-Game.forever(function(){
+Game.forever(function () {
     //tower function
-    for (var i=0; i<towers.length; i++){
+    /*for (var i=0; i<towers.length; i++){
 
         var tower=towers[i];
         
@@ -28,14 +74,17 @@ Game.forever(function(){
                 }
             }
         }
-    }
+    }*/
 
     //bad to good
-    for(var i=0; i<origin.length; i++){
-        if(origin[i].scale == 0 && Math.random() < 0.001 ){
+    for (var i = 0; i < origin.length; i++) {
+        if (origin[i].scale == 0){
+            origin[i].status = 2;
+        }
+        if (origin[i].scale == 0 && Math.random() < 0.001) {
             origin[i].costumeId = 0;
             origin[i].scale = 0.6;
-            origin.splice(i,1);
+            
         }
     }
 });
