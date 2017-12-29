@@ -12,6 +12,8 @@ for (var y = 0; y < W; y++) {
     }
 }
 
+//status 0: good, 1: growing, 2: bad, 3: dead
+
 forever(function() {
     cells.forEach(function(c) {
         if (c.status == 0) {
@@ -25,7 +27,7 @@ forever(function() {
         }
 
         if (c.status == 1) {
-            c.scale += 0.005;
+            c.scale += growingRate;
             if (c.scale >= 2) {
                 c.status = 2;
                 c.costumeId = 1;
@@ -45,7 +47,7 @@ forever(function() {
 });
 
 function spreadCancerCell (index) {
-    var rate = goodCellSpreadRate;
+    var rate = badCellSpreadRate;
     var c = cells[index];
     if (c != undefined && c.status == 0 && Math.random() < rate) {
         c.status = 1;
@@ -53,7 +55,7 @@ function spreadCancerCell (index) {
 }
 
 function spreadNormalCell (index) {
-    var rate = badCellSpreadRate;
+    var rate = goodCellSpreadRate;
     var c = cells[index];
     if (c != undefined && c.status == 3 && Math.random() < rate) {
         c.status = 0;

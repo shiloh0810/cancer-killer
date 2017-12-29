@@ -18,8 +18,8 @@ var cursor = Game.cursor;
 var createSprite = Game.createSprite;
 var forever = Game.forever;
 
-var W = 60;
-var H = 60;
+var W = 20;
+var H = 20;
 var health = 1000;
 var zoom = 100;
 var badCells = 0;
@@ -28,5 +28,6 @@ var deadCells = 0;
 var cells = [];
 var towers = [];
 
-var goodCellSpreadRate = 0.005;
-var badCellSpreadRate = 0.005;
+var goodCellSpreadRate = 0.0005;
+var badCellSpreadRate = 0.05;
+var growingRate = 0.005;

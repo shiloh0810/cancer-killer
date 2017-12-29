@@ -14,13 +14,15 @@ forever(function () {
     if (dragging) {
         var offsetX = cursor.x - pos.x;
         var offsetY = cursor.y - pos.y;
+
+        //pos saves current location
         pos.x = cursor.x;
         pos.y = cursor.y;
         cells.forEach(function (c) {
             c.move(offsetX, offsetY);
         });
-        towers.forEach(function (c) {
-            c.move(offsetX, offsetY);
+        towers.forEach(function (t) {
+            t.move(offsetX, offsetY);
         });
     }
 });
