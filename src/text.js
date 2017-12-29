@@ -32,7 +32,8 @@ var texts = {
         description: "Y-90 is the acronym for Yttrium 90 in which yttrium has an atomic number of 39 and 90 stands for its isotope. It is a relatively new palliative treatment. Surgeons often inject Y-90 into a patient's blood vessel to 'poison' the cancer cells. However, there may be a chance of 'poisoning' healthy cells along with infected cells, so recently it was the patients who have no other choices who use Y-90. But it is still a target treatment.",
     },
     "Immuno":{
-
+        title: "Immuno",
+        description: ""
     },
 };
 

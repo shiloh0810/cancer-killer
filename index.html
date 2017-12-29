@@ -10,18 +10,31 @@
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js"></script>
     <script src="./lib/engine.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css">
 </head>
 
 <body>
-    <div id="game">
-        <div class="progress" style="width: 80vw; position: absolute; top: 10px; left: 10vw;" >
+    <div id="game" style="padding: 60px 90px;">
+        
+        <div class="progress" style="width: 80vw; position: absolute; top: 10px; left: 10vw;">
             <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="health"></div>
         </div>
-        <input type="range" id="scroll-input" style="position: fixed; right: 10px; bottom: 10px;">
-        <div id="menu">
+        
+        <button class="btn tool-btn" style="right: 10px; bottom: 140px;">
+            <i class="fa fa-question-circle-o"></i>
+        </button>
+        <button class="btn tool-btn" style="right: 10px; bottom: 90px;">
+            <i class="fa fa-search-plus"></i>
+        </button>
+        <button class="btn tool-btn" style="right: 10px; bottom: 40px;">
+            <i class="fa fa-search-minus"></i>
+        </button>
+        
+        <div id="menu" data-intro='all your weapons here!' data-step="1">
             <div>
                 <img src="./assets/fire.png" class="menu-btn" alt="" onclick="buildTower(0)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('radiofrequency ablation')"></i>
@@ -59,8 +72,8 @@
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('embolism')"></i>
             </div>
         </div>
-        <canvas id="stage"></canvas>
-        <img src="./assets/arrow.png" alt="" id="arrow" style="position: absolute; bottom: 50px; left: 50vw; width: 50px; height: 50px; transform: translate(-50%, -50%);">
+
+        <canvas id="stage"  data-intro='game stage' data-step="2"></canvas>
         <img src="./assets/target.png" alt="" style="position: absolute; top: 50vh; left: 50vw; transform: translate(-50%, -50%);">
     </div>
     <div id="intro">
@@ -94,8 +107,7 @@
                 </a>
                 <a href="mailto:chen-chih1@outlook.com">
                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                </a>
-                    
+                </a>      
         </div>
     </div>
 
@@ -116,9 +128,26 @@
             </div>
         </div>
     </div>
-    <script src="./src/index.js"></script>
+    <script src="./src/variables.js"></script>
+    <script src="./src/main.js"></script>
+    <script src="./src/cells.js"></script>
     <script src="./src/text.js"></script>
-    <script src="./src/tower.js"></script>
+    <script src="./src/dragging.js"></script>
+    <script src="./src/zoom.js"></script>
+    <script src="./src/intro.js"></script>
+
+    <script src="./src/weapons/bulidTower.js"></script>
+    <script src="./src/weapons/chemotherapy.js"></script>
+    <script src="./src/weapons/cryoAblation.js"></script>
+    <script src="./src/weapons/embolism.js"></script>
+    <script src="./src/weapons/radiationTherapy.js"></script>
+    <script src="./src/weapons/radiationTherapy.js"></script>
+    <script src="./src/weapons/radiofrequencyAblation.js"></script>
+    <script src="./src/weapons/surgery.js"></script>
+    <script src="./src/weapons/transplantation.js"></script>
+    <script src="./src/weapons/Y90.js"></script>
+    <script src="./src/weapons/immuno.js"></script>
+
 </body>
 
 </html>
