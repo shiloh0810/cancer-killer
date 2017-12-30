@@ -23,17 +23,9 @@ var texts = {
         title: "Radiation Therapy",
         description: "Radiotherapy is a palliative and non-invasive cancer treatment that basically exposes a tumor to radioactive elements in a machine to kill cancer cells. However, one thing that bothers patients most about radiation therapy is that radioactive elements might kill healthy cells as well, resulting in permanent damage. Patients often find radiation therapy as a last resort since it can cause life-long damages on their health.",
     },
-    "embolism": {
-        title: "Embolism",
-        description: "Embolism is a palliative cancer treatment that basically block tumors from blood. It can be repeated several times; however, one thing that bothers patients most about embolism is that it would also block the nearby healthy cells from getting enough nutrients from blood. Patients who find themselves incapable of undergoing surgery or ablations seek for embolism as their last resort.",
-    },
-    "y90":{
-        title: "Y-90",
-        description: "Y-90 is the acronym for Yttrium 90 in which yttrium has an atomic number of 39 and 90 stands for its isotope. It is a relatively new palliative treatment. Surgeons often inject Y-90 into a patient's blood vessel to 'poison' the cancer cells. However, there may be a chance of 'poisoning' healthy cells along with infected cells, so recently it was the patients who have no other choices who use Y-90. But it is still a target treatment.",
-    },
     "Immuno":{
-        title: "Immuno",
-        description: ""
+        title: "Immunotherapy",
+        description: "Immunotherapy is a palliative and non-invasive cancer treatment that basically take out your white blood cells and train them outside your body to combat the specific cancer cells you have. Once the trained white blood cells are put back, they would know how to fight the cancer themselves. It is a relatively new treatment."
     },
 };
 

@@ -7,7 +7,7 @@ function cryoAblation() {
     var tower = createSprite("assets/icecube.png");
     tower.forever(function () {
         cells.forEach(function (c) {
-            if (tower.distanceTo(c) < range && c.status == 2) {
+            if (tower.distanceTo(c) < range && c.status == 2 || c.status == 1) {
                 c.scale -= power;
                 if (c.scale < 0) {
                     c.status = 3;

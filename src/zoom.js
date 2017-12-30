@@ -1,10 +1,10 @@
 $('i.fa.fa-search-plus').click(function () {
-    zoom += 10;
+    zoom -= 10;
     scaling();
 });
 
 $('i.fa.fa-search-minus').click(function () {
-    zoom -= 10;
+    zoom += 10;
     scaling();
 });
 

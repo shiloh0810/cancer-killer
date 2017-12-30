@@ -8,7 +8,23 @@ Game.set({
     debugMode: true
 });
 Game.preload([
-    "./assets/blue.png",
+    "./assets/arrow.png",
+    // "./assets/blue.png",
+    // "./assets/dish.png",
+    // "./assets/fire.png",
+    // "./assets/happy-liver.png",
+    // "./assets/icecube.png",
+    // "./assets/knife.png",
+    // "./assets/light.png",
+    // "./assets/medicine.png",
+    // "./assets/medicine2.png",
+    // "./assets/red.png",
+    // "./assets/shot.png",
+    // "./assets/target.png",
+    // "./assets/tower_1.png",
+    // "./assets/tower.png",
+    // "./assets/y-90.png",
+
 ], function () {
     Game.start();
 });
@@ -18,8 +34,8 @@ var cursor = Game.cursor;
 var createSprite = Game.createSprite;
 var forever = Game.forever;
 
-var W = 20;
-var H = 20;
+var W = 30;
+var H = 30;
 var health = 1000;
 var zoom = 100;
 var badCells = 0;
@@ -31,3 +47,8 @@ var towers = [];
 var goodCellSpreadRate = 0.0005;
 var badCellSpreadRate = 0.05;
 var growingRate = 0.005;
+
+$('.js-start-game').on('click', function () {
+    alert('w')
+    Game.start()
+})
