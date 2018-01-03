@@ -29,9 +29,9 @@ var texts = {
     },
 };
 
-function showMsg(key) {
+/*function showMsg(key) {
     var t = texts[key];
     $("#knowledge").modal();
     $("#knowledge-title").text(t.title);
     $("#knowledge-description").text(t.description);
-}
+}*/

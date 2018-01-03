@@ -11,10 +11,11 @@ function transplantation() {
             c.status = 0;
             c.scale = 0.6;
             c.costumeId = 0;
+            
         }
         
-    })
+    });
 
     return tower;
         
-}
+};

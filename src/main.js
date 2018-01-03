@@ -10,8 +10,17 @@ forever(function () {
         if (c.status == 1 || c.status == 2) badCells++;
         if (c.status == 3) deadCells++;
     });
+    /*setTimeout(function(){
+        if(badCells==1){
+            health += 100;
+            level++;
+        }
+    }, 10000);*/
+    
     Game.print('dead: ' + deadCells, 30, 30, 'white', 30);
     Game.print('bad: ' + badCells, 30, 60, 'white', 30);
+    Game.print('level: ' + level, 30, 90, 'white', 30);
+    
 });
 
 forever(function () {
@@ -28,5 +37,18 @@ forever(function () {
 
 function gameOver () {
     Game.stop();
-    alert("Game over");
+    $("#over").modal();
+}
+
+forever(function(){
+    $("#restart").click(function(){
+        location.reload();
+    });
+});
+
+function showMsg(key) {
+    var t = texts[key];
+    $("#knowledge").modal();
+    $("#knowledge-title").text(t.title);
+    $("#knowledge-description").text(t.description);
 }

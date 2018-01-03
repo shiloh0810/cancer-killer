@@ -35,39 +35,39 @@
         </button>
         
         <div id="menu" data-intro='Here are all of your weapons that you can use to combat the cancer cells. Click on the different icons to build the different weapons, or towers, on the cross in the center.' data-step="4">
-            <div data-intro='This is radiofrequency ablation. Click on the i icon on the top right to read more about information related to radiofrequency ablation. When you build this, the cancer cells in a specific range would be killed.' data-step="5">
+            <div class="js-weapons_0" data-intro='This is radiofrequency ablation. Click on the i icon on the top right to read more about information related to radiofrequency ablation. When you build this, the cancer cells in a specific range would be killed.' data-step="5">
                 <img src="./assets/fire.png" class="menu-btn" alt="" onclick="buildTower(0)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('radiofrequency ablation')"></i>
             </div>
-            <div data-intro='This is cryo ablation. It works like radiofrequency ablation. There is just a different range.' data-step="6">
+            <div class="js-weapons_1" data-intro='This is cryo ablation. It works like radiofrequency ablation. There is just a different range.' data-step="6">
                 <img src="./assets/icecube.png" class="menu-btn" alt="" onclick="buildTower(1)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('cryo ablation')"></i>
             </div>
-            <div data-intro='This is surgery. When you build this, all of the cells in a specific range would be killed.' data-step="7">
+            <div class="js-weapons_2" data-intro='This is surgery. When you build this, all of the cells in a specific range would be killed.' data-step="7">
                 <img src="./assets/knife.png" class="menu-btn" alt="" onclick="buildTower(2)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('surgery')"></i>
             </div>
-            <div data-intro='This is chemotherapy. When you build this, all of the cancer cells would grow slower.' data-step="8">
+            <div class="js-weapons_3" data-intro='This is chemotherapy. When you build this, all of the cancer cells would grow slower.' data-step="8">
                 <img src="./assets/shot.png" class="menu-btn" alt="" onclick="buildTower(3)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('chemotherapy')"></i>
             </div>
-            <div data-intro='This is radiation therapy. When you build this, all of the cancer cells would spread slower.' data-step="9">
+            <div class="js-weapons_4" data-intro='This is radiation therapy. When you build this, all of the cancer cells would spread slower.' data-step="9">
                 <img src="./assets/light.png" class="menu-btn" alt="" onclick="buildTower(4)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('radiotherapy')"></i>
             </div>
-            <!-- <div >
+            <!-- <div class="js-weapons_5" >
                 <img src="./assets/tower.png" class="menu-btn" alt="" onclick="buildTower(5)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('embolism')"></i>
             </div> -->
-            <!-- <div>
+            <!-- <div class="js-weapons_6">
                 <img src="./assets/y-90.png" class="menu-btn" alt="" onclick="buildTower(6)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('embolism')"></i>
             </div> -->
-            <div data-intro='This is transplantation.' data-step="10">
+            <div class="js-weapons_7" data-intro='This is transplantation.' data-step="10">
                 <img src="./assets/happy-liver.png" class="menu-btn" alt="" onclick="buildTower(7)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('transplantation')"></i>
             </div>
-            <div data-intro='This is immunotherapy.' data-step="11">
+            <div  class="js-weapons_8" data-intro='This is immunotherapy.' data-step="11">
                 <img src="./assets/dish.png" class="menu-btn" alt="" onclick="buildTower(8)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('embolism')"></i>
             </div>
@@ -116,7 +116,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button id="knowledge-button" type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button  type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title" id="knowledge-title">What Happened?</h4>
                 </div>
                 <div class="modal-body">
@@ -128,6 +128,21 @@
             </div>
         </div>
     </div>
+
+    <div id="over" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button  type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title" >GAME OVER</h4>
+                </div>
+                <div class="modal-body">
+                    <button id="restart">Restart Game </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="./src/variables.js"></script>
     <script src="./src/main.js"></script>
     <script src="./src/cells.js"></script>
@@ -136,6 +151,7 @@
     <script src="./src/zoom.js"></script>
     <script src="./src/intro.js"></script>
 
+    <script src="./src/weapons/display.js"></script>
     <script src="./src/weapons/bulidTower.js"></script>
     <script src="./src/weapons/chemotherapy.js"></script>
     <script src="./src/weapons/cryoAblation.js"></script>

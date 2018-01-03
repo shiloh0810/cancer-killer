@@ -48,7 +48,8 @@ var goodCellSpreadRate = 0.0005;
 var badCellSpreadRate = 0.05;
 var growingRate = 0.005;
 
+var level = 1;
+
 $('.js-start-game').on('click', function () {
-    alert('w')
     Game.start()
 })
