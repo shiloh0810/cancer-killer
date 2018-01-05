@@ -111,6 +111,9 @@ button.tool-btn {
     left: 0;
     z-index: 99999;
     position: fixed;
+
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #story-text{
@@ -119,4 +122,15 @@ button.tool-btn {
     height: 30vh;
     position: absolute;
     bottom: 50px;
+    font-size: 2em;
+    padding: 30px;
+}
+
+#avatar{
+    width: 30vw;
+    height: 30vh;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    background-size: cover;
 }
