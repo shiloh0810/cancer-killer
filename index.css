@@ -102,3 +102,21 @@ button.tool-btn {
     height: 15px;
     display: block;
 }
+
+#story{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    position: fixed;
+}
+
+#story-text{
+    background-color: white;
+    width: 100vw;
+    height: 30vh;
+    position: absolute;
+    bottom: 50px;
+}
