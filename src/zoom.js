@@ -1,9 +1,9 @@
-$('i.fa.fa-search-plus').click(function () {
+$('#plus').click(function () {
     zoom -= 10;
     scaling();
 });
 
-$('i.fa.fa-search-minus').click(function () {
+$('#minus').click(function () {
     zoom += 10;
     scaling();
 });

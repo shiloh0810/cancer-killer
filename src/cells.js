@@ -59,6 +59,7 @@ function spreadNormalCell (index) {
     var c = cells[index];
     if (c != undefined && c.status == 3 && Math.random() < rate) {
         c.status = 0;
+        health += 3;
         c.scale = 0.6;
         c.costumeId = 0;
     }
