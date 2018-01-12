@@ -71,8 +71,12 @@ function showStory_10(){
     });
 }
 
+var active=false;
+
 function showStory_11(){
     $("#story").hide();
+
+    var active=true;
     
     introJs().start().oncomplete(startGame).onexit(startGame);
     function startGame() {
@@ -81,8 +85,43 @@ function showStory_11(){
     }
 }
 
+function showStory_12(){
+    active= false;
+    $("#story").show();
+    $("#avatar").css("background-image", "url(./assets/doctor.png)")
+    var typed5 = new Typed('#story-text', {
+        strings: ['', 'Your patient has entered the last stage of cancer.'],
+    });
+}
+
+function showStory_13(){
+    $("#avatar").css("background-image", "url(./assets/doctor.png)")
+    var typed5 = new Typed('#story-text', {
+        strings: ['', 'He has gone through palliative care.'],
+    });
+}
+
+function showStory_14(){
+    $("#avatar").css("background-image", "url(./assets/doctor.png)")
+    var typed5 = new Typed('#story-text', {
+        strings: ['', 'You did a good job and I appreciate your help.'],
+    });
+}
+
+function showStory_15(){
+    $("#avatar").css("background-image", "url(./assets/doctor.png)")
+    var typed5 = new Typed('#story-text', {
+        strings: ['', 'Thank You!'],
+    });
+}
+
+function showStory_16(){
+    $("#story").hide();
+}
+
 $( "body" ).keyup(function( event ) {
     if ( event.which == 13 ) {
+        if (active) return;
      nextStory();
     }
   });
@@ -101,5 +140,9 @@ var current = 0;
     if(current==8) showStory_9();
     if(current==9) showStory_10();
     if(current==10) showStory_11();
+    if(current==12) showStory_13();
+    if(current==13) showStory_14();
+    if(current==14) showStory_15();
+    if(current==15) showStory_16();
     current++;
   }

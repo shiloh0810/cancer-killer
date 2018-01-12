@@ -36,7 +36,8 @@ forever(function () {
 
 function gameOver() {
     Game.stop();
-    $("#over").modal();
+    //$("#over").modal();
+    showStory_12();
 }
 
 forever(function () {
