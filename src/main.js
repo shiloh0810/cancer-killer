@@ -1,3 +1,7 @@
+var audio = Game.sound.play("assets/Allemande.mp3");
+audio.loop = true;
+
+
 forever(function () {
     var percent = health / 10;
     $("#health").width(percent + '%');
