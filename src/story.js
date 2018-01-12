@@ -1,17 +1,8 @@
-// var typed5 = new Typed('#story-text', {
-//     strings: ['', 'Emergency! Emergency!'],
-// });
-
-
-    var typed5 = new Typed('#story-text', {
-        strings: ['', 'Press Enter key to start.'],
-    });
-
+var typed5 = new Typed('#story-text', {
+    strings: ['', 'Press Enter key to start.'],
+});
 
 function showStory_1(){
-    Game.stop();
-    displayJs().stop();
-    introJs().stop();
     $("#story").css("background-image", "url(./assets/hospital.png)")
     var typed5 = new Typed('#story-text', {
         strings: ['', 'Emergency! Emergency!'],
@@ -82,12 +73,15 @@ function showStory_10(){
 
 function showStory_11(){
     $("#story").hide();
-    introJs().start();
-    Game.start();
-    displayJs().start();
+    
+    introJs().start().oncomplete(startGame).onexit(startGame);
+    function startGame() {
+        Game.start();
+        display();
+    }
 }
 
-$( "body" ).keydown(function( event ) {
+$( "body" ).keyup(function( event ) {
     if ( event.which == 13 ) {
      nextStory();
     }

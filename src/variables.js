@@ -9,25 +9,23 @@ Game.set({
 });
 Game.preload([
     "./assets/arrow.png",
-    // "./assets/blue.png",
-    // "./assets/dish.png",
-    // "./assets/fire.png",
-    // "./assets/happy-liver.png",
-    // "./assets/icecube.png",
-    // "./assets/knife.png",
-    // "./assets/light.png",
-    // "./assets/medicine.png",
-    // "./assets/medicine2.png",
-    // "./assets/red.png",
-    // "./assets/shot.png",
-    // "./assets/target.png",
-    // "./assets/tower_1.png",
-    // "./assets/tower.png",
-    // "./assets/y-90.png",
+    "./assets/blue.png",
+    "./assets/dish.png",
+    "./assets/fire.png",
+    "./assets/happy-liver.png",
+    "./assets/icecube.png",
+    "./assets/knife.png",
+    "./assets/light.png",
+    "./assets/medicine.png",
+    "./assets/medicine2.png",
+    "./assets/red.png",
+    "./assets/shot.png",
+    "./assets/target.png",
+    "./assets/tower_1.png",
+    "./assets/tower.png",
+    "./assets/y-90.png",
 
-], function () {
-    Game.start();
-});
+]);
 Game.setBackdrop("#333");
 
 var cursor = Game.cursor;
