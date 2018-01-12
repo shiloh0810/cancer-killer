@@ -16,44 +16,54 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css">
-    
+
 </head>
 
 <body>
     <div id="game" style="padding: 60px 90px;">
 
-        <div class="progress" style="width: 80vw; position: absolute; top: 20px; left: 10vw;" data-intro='This is the progress bar that shows your health value. Whenever you build a tower, it would decrease its value according to the value it requires to build that tower.' data-step="12">
-            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" id="health"></div>
+        <div class="progress" style="width: 80vw; position: absolute; top: 20px; left: 10vw;" data-intro='This is the progress bar that shows your health value. Whenever you build a tower, it would decrease its value according to the value it requires to build that tower.'
+            data-step="12">
+            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
+                id="health"></div>
         </div>
 
         <button class="btn tool-btn" style="right: 10px; bottom: 140px;">
             <i class="fa fa-question-circle-o"></i>
         </button>
-        <button id = "plus" class="btn tool-btn" style="right: 10px; bottom: 90px;" data-intro='This is the magnifier. Click on it to magnify the scale of the cells.' data-step="2">
+        <button id="plus" class="btn tool-btn" style="right: 10px; bottom: 90px;" data-intro='This is the magnifier. Click on it to magnify the scale of the cells.'
+            data-step="2">
             <i class="fa fa-search-plus"></i>
         </button>
-        <button  id = "minus" class="btn tool-btn" style="right: 10px; bottom: 40px;" data-intro='This is the minimizer. Click on it to see a larger range of the cells.' data-step="3">
+        <button id="minus" class="btn tool-btn" style="right: 10px; bottom: 40px;" data-intro='This is the minimizer. Click on it to see a larger range of the cells.'
+            data-step="3">
             <i class="fa fa-search-minus"></i>
         </button>
 
-        <div id="menu" data-intro='Here are all of your weapons that you can use to combat the cancer cells. Click on the different icons to build the different weapons, or towers, on the cross in the center.' data-step="4">
-            <div class="js-weapons_0" data-intro='This is radiofrequency ablation. Click on the i icon on the top right to read more about information related to radiofrequency ablation. When you build this, the cancer cells in a specific range would be killed.' data-step="5">
+        <div id="menu" data-intro='Here are all of your weapons that you can use to combat the cancer cells. Click on the different icons to build the different weapons, or towers, on the cross in the center.'
+            data-step="4">
+            <div class="js-weapons_0" data-intro='This is radiofrequency ablation. Click on the i icon on the top right to read more about information related to radiofrequency ablation. When you build this, the cancer cells in a specific range would be killed.'
+                data-step="5">
                 <img src="./assets/fire.png" class="menu-btn" alt="" onclick="buildTower(0)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('radiofrequency ablation')"></i>
             </div>
-            <div class="js-weapons_1" data-intro='This is cryo ablation. It works like radiofrequency ablation. There is just a different range.' data-step="6">
+            <div class="js-weapons_1" data-intro='This is cryo ablation. It works like radiofrequency ablation. There is just a different range.'
+                data-step="6">
                 <img src="./assets/icecube.png" class="menu-btn" alt="" onclick="buildTower(1)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('cryo ablation')"></i>
             </div>
-            <div class="js-weapons_2" data-intro='This is surgery. When you build this, all of the cells in a specific range would be killed.' data-step="7">
+            <div class="js-weapons_2" data-intro='This is surgery. When you build this, all of the cells in a specific range would be killed.'
+                data-step="7">
                 <img src="./assets/knife.png" class="menu-btn" alt="" onclick="buildTower(2)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('surgery')"></i>
             </div>
-            <div class="js-weapons_3" data-intro='This is chemotherapy. When you build this, all of the cancer cells would grow slower.' data-step="8">
+            <div class="js-weapons_3" data-intro='This is chemotherapy. When you build this, all of the cancer cells would grow slower.'
+                data-step="8">
                 <img src="./assets/shot.png" class="menu-btn" alt="" onclick="buildTower(3)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('chemotherapy')"></i>
             </div>
-            <div class="js-weapons_4" data-intro='This is radiation therapy. When you build this, all of the cancer cells would spread slower.' data-step="9">
+            <div class="js-weapons_4" data-intro='This is radiation therapy. When you build this, all of the cancer cells would spread slower.'
+                data-step="9">
                 <img src="./assets/light.png" class="menu-btn" alt="" onclick="buildTower(4)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('radiotherapy')"></i>
             </div>
@@ -69,7 +79,7 @@
                 <img src="./assets/happy-liver.png" class="menu-btn" alt="" onclick="buildTower(7)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('transplantation')"></i>
             </div>
-            <div  class="js-weapons_8" data-intro='This is immunotherapy.' data-step="11">
+            <div class="js-weapons_8" data-intro='This is immunotherapy.' data-step="11">
                 <img src="./assets/dish.png" class="menu-btn" alt="" onclick="buildTower(8)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('embolism')"></i>
             </div>
@@ -80,18 +90,33 @@
     </div>
     <div id="intro">
         <div id="about_game">
-            <h1>About Cancer Ciller</h1>
+            <h1>About Cancer Killer</h1>
             <p>
                 <font face="helvetica" size="4">Liver cancer is one of the most prevalent cancers in Taiwan. It is also one of the top ten cancers in the
                     United States. Cancer Ciller is a game that would guide you through the methods of treating liver cancers
                     and what you would need to consider when you are a liver cancer victim. While killing the cancer cells
-                    in Cancer Ciller, you would also gain more knowledge of medicine and all sorts of therapies, especially
+                    in Cancer Killer, you would also gain more knowledge of medicine and all sorts of therapies, especially
                     ones that are targeted for liver cancers.</font>
             </p>
         </div>
         <div id="pic">
             <div class="pic_1"></div>
         </div>
+        <h1 class="text-center">FAQ</h1>
+        <div class="container">
+            <div id="qa" class="row py-3 px-5">
+                <div class="col-md-6">
+                    <div class="alert alert-secondary js-qa">
+                        <p>Q1</p>
+                        <p style="display: none;">A1</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-secondary js-qa">question</div>
+                </div>
+                </div>
+        </div>
+        
         <div id="about_me">
             <h1>About Me - Shiloh Liu</h1>
             <p>
@@ -104,12 +129,12 @@
             </p>
         </div>
         <div id="my_links">
-                <a href="https://github.com/shiloh0810">
-                    <i class="fa fa-github-square" aria-hidden="true"></i>
-                </a>
-                <a href="mailto:chen-chih1@outlook.com">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                </a>      
+            <a href="https://github.com/shiloh0810">
+                <i class="fa fa-github-square" aria-hidden="true"></i>
+            </a>
+            <a href="mailto:chen-chih1@outlook.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
 
@@ -118,7 +143,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button  type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title" id="knowledge-title">What Happened?</h4>
                 </div>
                 <div class="modal-body">
@@ -135,8 +160,8 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button  type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title" >GAME OVER</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">GAME OVER</h4>
                 </div>
                 <div class="modal-body">
                     <button id="restart">Restart Game </button>
@@ -149,7 +174,7 @@
         <div id="story-text">
         </div>
         <div id="avatar">
-            </div>
+        </div>
     </div>
 
     <script src="./src/variables.js"></script>

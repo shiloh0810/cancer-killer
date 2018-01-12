@@ -134,3 +134,7 @@ button.tool-btn {
     right: 0;
     background-size: cover;
 }
+
+#stage{
+    background-image: url("assets/Screenshot.png");
+}
