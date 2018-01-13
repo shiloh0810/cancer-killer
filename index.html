@@ -79,10 +79,10 @@
                 <img src="./assets/happy-liver.png" class="menu-btn" alt="" onclick="buildTower(7)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('transplantation')"></i>
             </div>
-            <div class="js-weapons_8" data-intro='This is immunotherapy.' data-step="11">
+            <!-- <div class="js-weapons_8" data-intro='This is immunotherapy.' data-step="11">
                 <img src="./assets/dish.png" class="menu-btn" alt="" onclick="buildTower(8)">
                 <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('embolism')"></i>
-            </div>
+            </div> -->
         </div>
 
         <canvas id="stage" data-intro='This is the game stage. Drag the stage to find the growing cancer cells.' data-step="1"></canvas>
@@ -104,17 +104,56 @@
         <div id="pic">
             <div class="pic_1"></div>
         </div>
-        <h1 class="text-center">FAQ</h1>
+        <h1 class="text-center" id="q">FAQ</h1>
         <div class="container">
             <div id="qa" class="row py-3 px-5">
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p>Q1</p>
-                        <p style="display: none;">A1</p>
+                        <p style="font-size: 1.5em">Why liver cancer?</p>
+                        <p style="display: none;">My father, a radiologist, is an expert on liver cancer. He has a lot of liver cancer patients and often helps do ablations and embolisms. Also, Taiwan has a high rate of liver cancer, so that's why my brain is filled with information related to liver cancer..</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="alert alert-secondary js-qa">question</div>
+                    <div class="alert alert-secondary js-qa">
+                        <p style="font-size: 1.5em">How influential is liver cancer?</p>
+                        <p style="display: none;">According to Koo Foundation Sun Yat-Sen Cancer Center, liver cancer is one of the leading causes of cancer death in Taiwan, and the fifth most common cancer worldwide. It is a big part of human lives.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-secondary js-qa">
+                        <p style="font-size: 1.5em">What are the different types of liver cancer?</p>
+                        <p style="display: none;">There are Hepatitis A, B, C, D, E. Hepatitis B and C are the most prevalent. They are viruses and can be transmitted via blood, including blood transmission, needles, or drug abuse. If a mother is inflicted with liver cancer, there is also a possibility that her child would have the hepatitis virus.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-secondary js-qa">
+                        <p style="font-size: 1.5em">Is it true that cancer cells would expand faster after surgery?</p>
+                        <p style="display: none;">Not really. It is worse if you don't conduct a surgery. The cells might expand faster and reach a situation where the range is too large and surgery is not possible.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-secondary js-qa">
+                        <p style="font-size: 1.5em">What exactly can I learn from Cancer Killer?</p>
+                        <p style="display: none;">You would learn the different functions of the different types of cancer treatments. Each weapon represents one cancer treatment, and by clicking them, you would clearly understand each of its benefits.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-secondary js-qa">
+                        <p style="font-size: 1.5em">How do I prevent getting liver cancer?</p>
+                        <p style="display: none;">Avoid needle sharing and taking drugs and alchoholism. Drugs and alchoholism would cause liver damage and lead to cirrhosis. Any cirrhosis would have a possibility of turning into liver cancer. </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-secondary js-qa">
+                        <p style="font-size: 1.5em">Are cancers contagious?</p>
+                        <p style="display: none;">No. Cancer cells are specifically for your body and they have unique antibodies. When they enter other people's bodies, they are not likely to survive.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-secondary js-qa">
+                        <p style="font-size: 1.5em">What is palliative care?</p>
+                        <p style="display: none;">According to Hospice Foundation of Taiwan, the goal of palliative care is to help and take care of patients with respect as well as alleviate their pain. Help patients’ wishes come true and let patients die with peace and dignity. Also, help the family members of patients cope with grief and bereavement in order to continue going on with their lives.</p>
+                    </div>
                 </div>
                 </div>
         </div>
@@ -145,7 +184,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" onclick="myFunction()">&times;</button>
                     <h4 class="modal-title" id="knowledge-title">What Happened?</h4>
                 </div>
                 <div class="modal-body">
@@ -178,7 +217,9 @@
         <div id="avatar">
         </div>
     </div>
-
+    <script>function myFunction(){
+        Game.start();
+    }</script>
     <script src="./src/variables.js"></script>
     <script src="./src/main.js"></script>
     <script src="./src/cells.js"></script>

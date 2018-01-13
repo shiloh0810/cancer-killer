@@ -1,12 +1,12 @@
-function immuno() {
+// function immuno() {
 
-    var tower = createSprite("assets/dish.png");
+//     var tower = createSprite("assets/dish.png");
 
-    setTimeout(function(){
-        Game.stop();
-        alert("You Won!")
-    }, 6000);
+//     setTimeout(function(){
+//         Game.stop();
+//         alert("You Won!")
+//     }, 6000);
 
 
-    return tower;
-}
+//     return tower;
+// }

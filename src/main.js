@@ -41,8 +41,14 @@ forever(function () {
 function gameOver() {
     Game.stop();
     //$("#over").modal();
-    showStory_12();
+    setTimeout(function(){showStory_12()}, 3000)
     
+    Game.sound.stop("assets/Righteous.mp3");
+    audio = Game.sound.play("assets/Allemande.mp3");
+    audio.loop = true;
+    alert('Game Over!')
+
+
 }
 
 forever(function () {
@@ -60,9 +66,9 @@ function showMsg(key) {
 
 $('.js-qa').click(function () {
     var ele = $(this).find('p')[1];
-    if ($(ele).css('display') == 'none'){
+    if ($(ele).css('display') == 'none') {
         $(ele).show();
-    }else {
+    } else {
         $(ele).hide();
     }
 

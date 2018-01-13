@@ -8,12 +8,13 @@ function display() {
     // delayShow('.js-weapons_5', 5, 30000);
     // delayShow('.js-weapons_6', 6, 4000);
     delayShow('.js-weapons_7', 'transplantation', 30000);
-    delayShow('.js-weapons_8', 'Immuno', 40000);
+    //delayShow('.js-weapons_8', 'Immuno', 40000);
 
     function delayShow(element, key, time) {
         setTimeout(function () {
             $(element).show();
             showMsg(key);
+            Game.stop();
         }, time)
     }
 }

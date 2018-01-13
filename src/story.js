@@ -92,9 +92,16 @@ function showStory_12(){
     active= false;
     $("#story").show();
     $("#avatar").css("background-image", "url(./assets/doctor.png)")
-    var typed5 = new Typed('#story-text', {
-        strings: ['', 'Your patient has entered the last stage of cancer.'],
-    });
+    if(health < 1){
+        var typed5 = new Typed('#story-text', {
+            strings: ['', 'Your patient has a health value of 0.'],
+        });
+    }else{
+        var typed5 = new Typed('#story-text', {
+            strings: ['', 'Your patient has entered the last stage of cancer.'],
+        });
+    };
+    
 }
 
 function showStory_13(){
@@ -107,7 +114,7 @@ function showStory_13(){
 function showStory_14(){
     $("#avatar").css("background-image", "url(./assets/doctor.png)")
     var typed5 = new Typed('#story-text', {
-        strings: ['', 'You did a good job and I appreciate your help.'],
+        strings: ['', 'But I know you did a good job and I appreciate it.'],
     });
 }
 
@@ -120,6 +127,7 @@ function showStory_15(){
 
 function showStory_16(){
     $("#story").hide();
+    alert('If you want to restart game, refresh this site. If not, press OK and scroll down for more information. :)');
 }
 
 $( "body" ).keyup(function( event ) {
