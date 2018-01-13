@@ -1,6 +1,17 @@
-var audio = Game.sound.play("assets/Allemande.mp3");
-audio.loop = true;
+var audio1 = new Audio("./assets/Allemande.mp3");
+var audio2 = new Audio("./assets/hi.mp3");
 
+audio1.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+audio2.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+audio1.play();
 
 forever(function () {
     var percent = health / 10;
@@ -43,20 +54,12 @@ function gameOver() {
     Game.stop();
     //$("#over").modal();
     setTimeout(function(){showStory_12()}, 3000)
-    
-    Game.sound.stop("assets/Righteous.mp3");
-    audio = Game.sound.play("assets/Allemande.mp3");
-    audio.loop = true;
+    audio1.pause();
+    audio2.play();
     alert('Game Over!')
 
 
 }
-
-forever(function () {
-    $("#restart").click(function () {
-        location.reload();
-    });
-});
 
 //different knowledge appear with different towers
 function showMsg(key) {
@@ -74,5 +77,8 @@ $('.js-qa').click(function () {
     } else {
         $(ele).hide();
     }
+});
 
-})
+$('#knowledge').on('hidden.bs.modal', function (e) {
+    myFunction();
+});

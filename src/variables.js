@@ -1,6 +1,8 @@
 //minus the margins
 var width = $(window).width() - 180;
 var height = $(window).height() - 120;
+var initWidth = width;
+var initHeight = height;
 
 var Game = Engine('stage');
 Game.set({
