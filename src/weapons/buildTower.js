@@ -37,6 +37,6 @@ function buildTower(key) {
     // if (key == 8) {
     //     tower = immuno();
     //     health -= 100;
-    }
+    //}
     towers.push(tower);
 };
