@@ -91,7 +91,7 @@ function showStory_12(){
     $("#avatar").css("background-image", "url(./assets/doctor.png)")
     if(health < 1){
         var typed5 = new Typed('#story-text', {
-            strings: ['', 'Your patient has a health value of 0.'],
+            strings: ['', 'Our patient has a really low health value of 0.'],
         });
     }else{
         var typed5 = new Typed('#story-text', {
@@ -104,7 +104,7 @@ function showStory_12(){
 function showStory_13(){
     $("#avatar").css("background-image", "url(./assets/doctor.png)")
     var typed5 = new Typed('#story-text', {
-        strings: ['', 'He has gone through palliative care.'],
+        strings: ['', 'So he has gone through palliative care.'],
     });
 }
 
