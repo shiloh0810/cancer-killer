@@ -12,6 +12,7 @@ function scaling () {
     Game.set({
         width: width * (zoom / 100),
         height: height * (zoom / 100),
+        //zoom multiplied by its reciprocal
         zoom: 100 / zoom
     });
 }

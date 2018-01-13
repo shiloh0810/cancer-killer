@@ -11,6 +11,7 @@ forever(function () {
     badCells = 0;
     deadCells = 0;
     cells.forEach(function (c) {
+        //both when cell is growing or when it's already red => bad
         if (c.status == 1 || c.status == 2) badCells++;
         if (c.status == 3) deadCells++;
     });
@@ -57,11 +58,13 @@ forever(function () {
     });
 });
 
+//different knowledge appear with different towers
 function showMsg(key) {
     var t = texts[key];
     $("#knowledge").modal();
     $("#knowledge-title").text(t.title);
     $("#knowledge-description").text(t.description);
+    $("#instruction").text(t.instruction);
 }
 
 $('.js-qa').click(function () {

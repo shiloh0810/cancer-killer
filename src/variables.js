@@ -1,3 +1,4 @@
+//minus the margins
 var width = $(window).width() - 180;
 var height = $(window).height() - 120;
 

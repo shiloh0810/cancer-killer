@@ -1,3 +1,5 @@
+//clicked in index.html => buildTower()
+
 function buildTower(key) {
     var tower;
     if (key == 0) {
@@ -32,9 +34,9 @@ function buildTower(key) {
         tower = transplantation();
         health -= 500;
     }
-    if (key == 8) {
-        tower = immuno();
-        health -= 100;
+    // if (key == 8) {
+    //     tower = immuno();
+    //     health -= 100;
     }
     towers.push(tower);
 };

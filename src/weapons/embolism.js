@@ -1,6 +1,6 @@
-function embolism() {
+// function embolism() {
 
-    var tower = createSprite("assets/tower.png");
+//     var tower = createSprite("assets/tower.png");
 
-    return tower;
-}
+//     return tower;
+// }

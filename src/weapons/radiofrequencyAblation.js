@@ -1,6 +1,6 @@
 function radiofrequencyAblation() {
     
-    var range = 400;
+    var range = 300;
     var power = 0.008;
     var lifeTime = 12000;
 

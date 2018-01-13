@@ -8,7 +8,7 @@ function transplantation() {
         c.status=0;
     })
         
-    
+    //change cell one by one
     tower.forever(function(){
         i ++;
         if(i>cells.length) tower.destroy();

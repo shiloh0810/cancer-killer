@@ -130,6 +130,7 @@ function showStory_16(){
     alert('If you want to restart game, refresh this site. If not, press OK and scroll down for more information. :)');
 }
 
+//only if the story is active does the keyup needs to do nextStory, or else the story would keep going on and the ending story would not appear.
 $( "body" ).keyup(function( event ) {
     if ( event.which == 13 ) {
         if (active) return;
