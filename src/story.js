@@ -83,7 +83,8 @@ function showStory_11(){
         Game.start();
         display();
         Game.sound.stop("assets/Allemande.mp3");
-        audio = Game.sound.start("assets/Righteous.mp3");
+        audio = Game.sound.play("assets/Righteous.mp3");
+        audio.loop= true;
     }
 }
 
