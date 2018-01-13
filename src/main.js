@@ -42,6 +42,7 @@ function gameOver() {
     Game.stop();
     //$("#over").modal();
     showStory_12();
+    
 }
 
 forever(function () {
