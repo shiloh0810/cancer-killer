@@ -82,3 +82,8 @@ $('.js-qa').click(function () {
 $('#knowledge').on('hidden.bs.modal', function (e) {
     myFunction();
 });
+
+function myFunction() {
+    //When press the close button for knowledge modal, (that means when the modal is closed), game would resume. (Game stops when player is reading knowledge.)
+    Game.start();
+}

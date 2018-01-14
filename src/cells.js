@@ -74,7 +74,7 @@ function spreadNormalCell (index) {
 
 //cancer keep growing
 forever(function () {
-    if (badCells < 3) {
+    if (badCells < 1) {
         var rand = Math.floor(Math.random() * W * H);
         cells[rand].status = 1;
     }
