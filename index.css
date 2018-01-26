@@ -133,6 +133,14 @@ button.tool-btn {
     padding: 30px;
 }
 
+#story i{
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    color: red;
+    font-size: 3rem;
+}
+
 #avatar{
     width: 30vw;
     height: 30vh;
