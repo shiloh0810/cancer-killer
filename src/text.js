@@ -26,7 +26,7 @@ var texts = {
     },
     "radiation therapy": {
         title: "Radiation Therapy",
-        description: "Radiotherapy is a palliative and non-invasive cancer treatment that basically exposes a tumor to radioactive elements in a machine. However, radioactive elements might injure adjacent organs, resulting in permanent damage. Patients often find radiation therapy as a last resort since it can cause life-long damages on their health.",
+        description: "Radiation therapy is a palliative and non-invasive cancer treatment that basically exposes a tumor to radioactive elements in a machine. However, radioactive elements might injure adjacent organs, resulting in permanent damage. Patients often find radiation therapy as a last resort since it can cause life-long damages on their health.",
         instruction: "200 Build and slow down the spreading rate!"
     },
     // "Immuno":{

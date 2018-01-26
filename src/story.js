@@ -129,7 +129,7 @@ function showStory_16(){
 
 //only if the story is active does the keyup needs to do nextStory, or else the story would keep going on and the ending story would not appear.
 $( "body" ).keyup(function( event ) {
-    if ( event.which == 13 ) {
+    if ( event.which == 13 || event.which == 40 || event.which == 32) {
         if (active) return;
      nextStory();
     }

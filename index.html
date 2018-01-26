@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cancer Killer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+    <!-- <script src="./lib/jquery-3.1.1.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js"></script>
@@ -24,7 +27,7 @@
     <div id="game" style="padding: 60px 90px;">
         <!-- progress bar -->
         <div class="progress" style="width: 80vw; position: absolute; top: 20px; left: 10vw;" data-intro='This is the progress bar that shows your health value. Whenever you build a tower, it would decrease its value according to the value it requires to build that tower.'
-            data-step="12">
+            data-step="4">
             <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"
                 id="health"></div>
         </div>
@@ -68,7 +71,7 @@
             <div class="js-weapons_4" data-intro='This is radiation therapy. When you build this, all of the cancer cells would spread slower.'
                 data-step="9">
                 <img src="./assets/light.png" class="menu-btn" alt="" onclick="buildTower(4)">
-                <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('radiotherapy')"></i>
+                <i class="fa fa-info-circle" aria-hidden="true" onclick="showMsg('radiation therapy')"></i>
             </div>
             <!-- <div class="js-weapons_5" >
                 <img src="./assets/tower.png" class="menu-btn" alt="" onclick="buildTower(5)">
@@ -111,61 +114,65 @@
             <div id="qa" class="row py-3 px-5">
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em">Why liver cancer?</p>
-                        <p style="display: none;">My father, a radiologist, is an expert on liver cancer. He has a lot of liver cancer patients and
-                            often helps do ablations and embolizations. Also, Taiwan has a high rate of liver cancer, so that's
-                            why my brain is filled with information related to liver cancer.</p>
+                        <p data-toggle="collapse" style="font-size: 1.5em" class = "pointer">Why liver cancer?</p>
+                        <p style="display: none;" class = "pointer">My father, a radiologist, is an expert on liver cancer. He has a lot of liver cancer patients and
+                            often helps do ablations and embolizations. Also, Taiwan has a high rate of liver cancer, so
+                            that's why my brain is filled with information related to liver cancer.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em">How influential is liver cancer?</p>
-                        <p style="display: none;">According to Koo Foundation Sun Yat-Sen Cancer Center, liver cancer is one of the leading causes
+                        <p style="font-size: 1.5em" class = "pointer" >How influential is liver cancer?</p>
+                        <p style="display: none;" class = "pointer">According to Koo Foundation Sun Yat-Sen Cancer Center, liver cancer is one of the leading causes
                             of cancer death in Taiwan, and the fifth most common cancer worldwide. It is a big part of human
-                            lives.</p>
+                            lives.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em">What are the different types of liver cancer?</p>
-                        <p style="display: none;">There are Hepatitis A, B, C, D, E. Hepatitis B and C are the most prevalent. They are viruses and
-                            can be transmitted via blood, including blood transfusion, tattoos, and needle sharing. If a mother
-                            is inflicted with Hepatitis B virus, there is also a possibility that her child would get the same virus.</p>
+                        <p style="font-size: 1.5em" class = "pointer">What are the different types of liver cancer?</p>
+                        <p style="display: none;" class = "pointer">There are Hepatitis A, B, C, D, E. Hepatitis B and C are the most prevalent. They are viruses and
+                            can be transmitted via blood, including blood transfusion, tattoos, and needle sharing. If a
+                            mother is inflicted with Hepatitis B virus, there is also a possibility that her child would
+                            get the same virus.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em">Is it true that cancer cells would expand faster after surgery?</p>
-                        <p style="display: none;">Not really. It is worse if you don't conduct a surgery. The cells might expand faster and reach a
+                        <p style="font-size: 1.5em" class = "pointer">Is it true that cancer cells would expand faster after surgery?</p>
+                        <p style="display: none;" class = "pointer">Not really. It is worse if you don't conduct a surgery. The cells might expand faster and reach a
                             situation where the range is too large and surgery is not possible.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em">What exactly can I learn from Cancer Killer?</p>
-                        <p style="display: none;">You would learn the different functions of the different types of cancer treatments. Each weapon
+                        <p style="font-size: 1.5em" class = "pointer">What exactly can I learn from Cancer Killer?</p>
+                        <p style="display: none;" class = "pointer">You would learn the different functions of the different types of cancer treatments. Each weapon
                             represents one cancer treatment, and by clicking them, you would clearly understand each of its
-                            benefits.</p>
+                            benefits.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em">How do I prevent getting liver cancer?</p>
-                        <p style="display: none;">Avoid needle sharing or drug abuse and alchoholism. Drug abuse and alchoholism would cause liver damage
-                            and lead to cirrhosis. Any cirrhosis would have a possibility of turning into liver cancer. </p>
+                        <p style="font-size: 1.5em" class = "pointer">How do I prevent getting liver cancer?</p>
+                        <p style="display: none;" class = "pointer">Avoid needle sharing or drug abuse and alchoholism. Drug abuse and alchoholism would cause liver
+                            damage and lead to cirrhosis. Any cirrhosis would have a possibility of turning into liver cancer.
+                            </p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em">Are cancers contagious?</p>
-                        <p style="display: none;">No. Cancer cells are specifically for your body and they have unique surface antigens. When they enter
-                            other people's bodies, they are not likely to survive.</p>
+                        <p style="font-size: 1.5em" class = "pointer">Are cancers contagious?</p>
+                        <p style="display: none;" class = "pointer">No. Cancer cells are specifically for your body and they have unique surface antigens. When they
+                            enter other people's bodies, they are not likely to survive.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em">What is palliative care?</p>
-                        <p style="display: none;">According to Hospice Foundation of Taiwan, the goal of palliative care is to help and take care of
+                        <p style="font-size: 1.5em" class = "pointer">What is palliative care?</p>
+                        <p style="display: none;" class = "pointer">According to Hospice Foundation of Taiwan, the goal of palliative care is to help and take care of
                             patients with respect as well as alleviate their pain. Help patients’ wishes come true and let
                             patients die with peace and dignity. Also, help the family members of patients cope with grief
                             and bereavement in order to continue going on with their lives.</p>
@@ -180,9 +187,9 @@
                 <font face="helvetica" size="4">My father is an interventional radiologist who does minimally-invasive image-guided procedures to diagnose
                     and treat different diseases. He is specialised in treating the abdomen, especially for liver cancers
                     such as hepatitis. I am exposed to this kind of knowledge from a very young age. I am also extremely
-                    interested in what my father is doing and after quite a long talk with my father, I decided to make Cancer Killer,
-                    combining my passion for biology and coding both. My goal is to let more people, including you, know
-                    more about liver cancer, its treatments, and the importance of making the right decision.</font>
+                    interested in what my father is doing and after quite a long talk with my father, I decided to make Cancer
+                    Killer, combining my passion for biology and coding both. My goal is to let more people, including you,
+                    know more about liver cancer, its treatments, and the importance of making the right decision.</font>
             </p>
         </div>
         <div id="my_links">

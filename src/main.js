@@ -56,6 +56,7 @@ function gameOver() {
     setTimeout(function(){showStory_12()}, 3000)
     audio1.pause();
     audio2.play();
+    display.stop();
     alert('Game Over!')
 
 
@@ -71,12 +72,15 @@ function showMsg(key) {
 }
 
 $('.js-qa').click(function () {
-    var ele = $(this).find('p')[1];
-    if ($(ele).css('display') == 'none') {
-        $(ele).show();
-    } else {
-        $(ele).hide();
-    }
+    // var ele = $(this).find('p')[1];
+    // if ($(ele).css('display') == 'none') {
+    //     $(ele).show();
+    // } else {
+    //     $(ele).hide();
+    // }
+
+    var ele = $(this).find('p');
+    ele.slideToggle("slow");
 });
 
 $('#knowledge').on('hidden.bs.modal', function (e) {
