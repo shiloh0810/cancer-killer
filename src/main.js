@@ -41,12 +41,15 @@ forever(function () {
 forever(function () {
     if (health <= 0) {
         gameOver();
+        over=true;
     };
     if (badCells / cells.length > 0.7) {
         gameOver();
+        over=true;
     }
-    if (deadCells / cells.length > 0.8) {
+    if (deadCells / cells.length > 0.7) {
         gameOver();
+        over=true;
     }
 });
 

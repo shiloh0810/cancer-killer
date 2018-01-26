@@ -54,3 +54,5 @@ var level = 1;
 $('.js-start-game').on('click', function () {
     Game.start()
 })
+
+var over = false;
