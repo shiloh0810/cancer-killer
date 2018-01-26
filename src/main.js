@@ -51,16 +51,19 @@ forever(function () {
         gameOver();
         over=true;
     }
+    if((badCells + deadCells) / cells.length > 0.7){
+        gameOver();
+        over=true;
+    }
 });
 
 function gameOver() {
     Game.stop();
     //$("#over").modal();
-    setTimeout(function(){showStory_12()}, 3000)
+    setTimeout(function(){showStory_12()}, 3000);
     audio1.pause();
     audio2.play();
-    display.stop();
-    alert('Game Over!')
+    //alert('Game Over!')
 
 
 }

@@ -12,9 +12,12 @@ function display() {
 
     function delayShow(element, key, time) {
         setTimeout(function () {
-            $(element).show();
-            showMsg(key);
-            Game.stop();
+            if(!over){
+                $(element).show();
+                showMsg(key);
+                Game.stop();
+            };
+            
         }, time)
     }
 }
