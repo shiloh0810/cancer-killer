@@ -16,7 +16,7 @@ var texts = {
     },
     "cryo ablation": {
         title: "Cryo Ablation",
-        description: "Cryo ablation basically inserts a needle in the center of a tumor and freezes it until it dies. It can be repeated several times with minimal invasion. However, However, if the tumor is too large, it may not be freezed completely.",
+        description: "Cryo ablation basically inserts a needle in the center of a tumor and freezes it until it dies. It can be repeated several times with minimal invasion. However, if the tumor is too large, it may not be freezed completely.",
         instruction: "200 Build and kill the cancer cells around you!"
     },
     "chemotherapy": {

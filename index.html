@@ -27,11 +27,11 @@
         <img src="./assets/spinner.gif" alt="">
     </div>
     <script>
-        $(function() {
-            setTimeout(function(){
+        $(function () {
+            setTimeout(function () {
                 $(".loading").fadeOut();
             }, 1000);
-           
+
         })
     </script>
     <img src="./assets/face.png" alt="" style="display: none;">
@@ -55,7 +55,7 @@
             <i class="fa fa-search-plus"></i>
         </button>
         <!-- button for minifying cells (larger range)-->
-        <button id="minus"  onclick="nextStep(2)" class="btn tool-btn" style="right: 10px; bottom: 40px;" data-intro='This is the minimizer. Click on it to see a larger range of the cells.'
+        <button id="minus" onclick="nextStep(2)" class="btn tool-btn" style="right: 10px; bottom: 40px;" data-intro='This is the minimizer. Click on it to see a larger range of the cells.'
             data-step="3">
             <i class="fa fa-search-minus"></i>
         </button>
@@ -105,12 +105,14 @@
             </div> -->
         </div>
 
-        <canvas id="stage" onmouseup="nextStep(0);" data-intro='This is the game stage. Drag the stage to find the growing cancer cells.' data-step="1"></canvas>
+        <canvas id="stage" onmouseup="nextStep(0);" data-intro='This is the game stage. Drag the stage to find the growing cancer cells.'
+            data-step="1"></canvas>
         <img src="./assets/target.png" alt="" style="position: absolute; top: 50vh; left: 50vw; transform: translate(-50%, -50%);">
     </div>
     <div id="intro">
         <div id="about_game" style="position: relative">
-            <i class="fa fa-angle-double-down" aria-hidden="true" style="position: absolute; top: 0; font-size: 3rem;"></i>
+            <i class="fa fa-angle-double-down" aria-hidden="true" style="animation-name: example;
+            animation-duration: 4s;position: absolute; top: 0; font-size: 3rem; color: magenta; animation-iteration-count: 1000"></i>
 
             <h1>About Cancer Killer</h1>
             <p>
@@ -128,16 +130,16 @@
             <div id="qa" class="row py-3 px-5">
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p data-toggle="collapse" style="font-size: 1.5em" class = "pointer">Why liver cancer?</p>
-                        <p style="display: none;" class = "pointer">My father, a radiologist, is an expert on liver cancer. He has a lot of liver cancer patients and
+                        <p data-toggle="collapse" style="font-size: 1.5em" class="pointer">Why liver cancer?</p>
+                        <p style="display: none;" class="pointer">My father, a radiologist, is an expert on liver cancer. He has a lot of liver cancer patients and
                             often helps do ablations and embolizations. Also, Taiwan has a high rate of liver cancer, so
                             that's why my brain is filled with information related to liver cancer.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em" class = "pointer" >How influential is liver cancer?</p>
-                        <p style="display: none;" class = "pointer">According to Koo Foundation Sun Yat-Sen Cancer Center, liver cancer is one of the leading causes
+                        <p style="font-size: 1.5em" class="pointer">How influential is liver cancer?</p>
+                        <p style="display: none;" class="pointer">According to Koo Foundation Sun Yat-Sen Cancer Center, liver cancer is one of the leading causes
                             of cancer death in Taiwan, and the fifth most common cancer worldwide. It is a big part of human
                             lives.
                         </p>
@@ -145,8 +147,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em" class = "pointer">What are the different types of liver cancer?</p>
-                        <p style="display: none;" class = "pointer">There are Hepatitis A, B, C, D, E. Hepatitis B and C are the most prevalent. They are viruses and
+                        <p style="font-size: 1.5em" class="pointer">What are the different types of liver cancer?</p>
+                        <p style="display: none;" class="pointer">There are Hepatitis A, B, C, D, E. Hepatitis B and C are the most prevalent. They are viruses and
                             can be transmitted via blood, including blood transfusion, tattoos, and needle sharing. If a
                             mother is inflicted with Hepatitis B virus, there is also a possibility that her child would
                             get the same virus.</p>
@@ -154,15 +156,15 @@
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em" class = "pointer">Is it true that cancer cells would expand faster after surgery?</p>
-                        <p style="display: none;" class = "pointer">Not really. It is worse if you don't conduct a surgery. The cells might expand faster and reach a
+                        <p style="font-size: 1.5em" class="pointer">Is it true that cancer cells would expand faster after surgery?</p>
+                        <p style="display: none;" class="pointer">Not really. It is worse if you don't conduct a surgery. The cells might expand faster and reach a
                             situation where the range is too large and surgery is not possible.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em" class = "pointer">What exactly can I learn from Cancer Killer?</p>
-                        <p style="display: none;" class = "pointer">You would learn the different functions of the different types of cancer treatments. Each weapon
+                        <p style="font-size: 1.5em" class="pointer">What exactly can I learn from Cancer Killer?</p>
+                        <p style="display: none;" class="pointer">You would learn the different functions of the different types of cancer treatments. Each weapon
                             represents one cancer treatment, and by clicking them, you would clearly understand each of its
                             benefits.
                         </p>
@@ -170,23 +172,23 @@
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em" class = "pointer">How do I prevent getting liver cancer?</p>
-                        <p style="display: none;" class = "pointer">Avoid needle sharing or drug abuse and alchoholism. Drug abuse and alchoholism would cause liver
+                        <p style="font-size: 1.5em" class="pointer">How do I prevent getting liver cancer?</p>
+                        <p style="display: none;" class="pointer">Avoid needle sharing or drug abuse and alchoholism. Drug abuse and alchoholism would cause liver
                             damage and lead to cirrhosis. Any cirrhosis would have a possibility of turning into liver cancer.
-                            </p>
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em" class = "pointer">Are cancers contagious?</p>
-                        <p style="display: none;" class = "pointer">No. Cancer cells are specifically for your body and they have unique surface antigens. When they
+                        <p style="font-size: 1.5em" class="pointer">Are cancers contagious?</p>
+                        <p style="display: none;" class="pointer">No. Cancer cells are specifically for your body and they have unique surface antigens. When they
                             enter other people's bodies, they are not likely to survive.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="alert alert-secondary js-qa">
-                        <p style="font-size: 1.5em" class = "pointer">What is palliative care?</p>
-                        <p style="display: none;" class = "pointer">According to Hospice Foundation of Taiwan, the goal of palliative care is to help and take care of
+                        <p style="font-size: 1.5em" class="pointer">What is palliative care?</p>
+                        <p style="display: none;" class="pointer">According to Hospice Foundation of Taiwan, the goal of palliative care is to help and take care of
                             patients with respect as well as alleviate their pain. Help patients’ wishes come true and let
                             patients die with peace and dignity. Also, help the family members of patients cope with grief
                             and bereavement in order to continue going on with their lives.</p>
@@ -253,7 +255,7 @@
         </div>
         <div id="avatar">
         </div>
-        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        <i class="fa fa-arrow-down" aria-hidden="true" style="color:fuchsia; animation-name: example2; animation-duration: 4s; animation-iteration-count: 10"></i>
     </div>
     <script src="./src/variables.js"></script>
     <script src="./src/main.js"></script>
@@ -279,8 +281,8 @@
     <script src="./src/story.js"></script>
 
     <script>
-        function nextStep(step){
-            if(myIntroJs._currentStep == step) myIntroJs.nextStep();
+        function nextStep(step) {
+            if (myIntroJs._currentStep == step) myIntroJs.nextStep();
         }
     </script>
 

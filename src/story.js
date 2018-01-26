@@ -122,7 +122,7 @@ function showStory_16() {
 
 $(function () {
     var typed5 = new Typed('#story-text', {
-        strings: ['', 'Press Enter key to start.'],
+        strings: ['', 'Press Enter key to start. Enter, Down Arrow, or Spacebar to continue.'],
     });
 
 

@@ -72,9 +72,19 @@ function spreadNormalCell (index) {
     }
 }
 
+var limit = 1;
+
+forever(
+    function(){
+        for(var i=0; i<5; i++){
+            limit += 0.000008;
+        }
+    }
+)
+
 //cancer keep growing
 forever(function () {
-    if (badCells < 1) {
+    if (badCells < limit) {
         var rand = Math.floor(Math.random() * W * H);
         cells[rand].status = 1;
     }
