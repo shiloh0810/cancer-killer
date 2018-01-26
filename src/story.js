@@ -72,11 +72,10 @@ function showStory_11() {
 
     var active = true;
 
-    introJs().start().oncomplete(startGame).onexit(startGame);
-    function startGame() {
-        Game.start();
-        display();
-    }
+    window.myIntroJs = introJs().start();
+    Game.start();
+    display();
+
 }
 
 function showStory_12() {
@@ -126,11 +125,11 @@ $(function () {
         strings: ['', 'Press Enter key to start.'],
     });
 
-    
+
 
     var active = false;
 
-    
+
 
     //only if the story is active does the keyup needs to do nextStory, or else the story would keep going on and the ending story would not appear.
     $("body").keyup(function (event) {

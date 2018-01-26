@@ -1,8 +1,8 @@
-$('#menu div').hide();
+
 function display() {
-    delayShow('.js-weapons_0', 'radiofrequency ablation', 0);
-    delayShow('.js-weapons_1', 'cryo ablation', 0);
-    delayShow('.js-weapons_2', 'surgery', 0);
+    // delayShow('.js-weapons_0', 'radiofrequency ablation', 0);
+    // delayShow('.js-weapons_1', 'cryo ablation', 0);
+    // delayShow('.js-weapons_2', 'surgery', 0);
     delayShow('.js-weapons_3', 'chemotherapy', 20000);
     delayShow('.js-weapons_4', 'radiation therapy', 30000);
     // delayShow('.js-weapons_5', 5, 30000);

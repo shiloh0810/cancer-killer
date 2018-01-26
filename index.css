@@ -143,7 +143,7 @@ button.tool-btn {
 }
 
 #stage{
-    background-image: url("assets/Screenshot.png");
+    /* background-image: url("assets/Screenshot.png"); */
     display: block;
     position: absolute;
     top: 0;
@@ -168,4 +168,8 @@ button.tool-btn {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.introjs-prevbutton, .introjs-nextbutton, .introjs-skipbutton, .introjs-bullets {
+    display: none !important;
 }
