@@ -17,7 +17,7 @@ for (var y = 0; y < W; y++) {
 
 //status 0: good, 1: growing, 2: bad, 3: dead
 
-//finding cells to change status (jump between forever and spread function)
+//finding cells to change status
 forever(function() {
     cells.forEach(function(c) {
         if (c.status == 0) {
@@ -77,7 +77,7 @@ var limit = 1;
 forever(
     function(){
         for(var i=0; i<5; i++){
-            limit += 0.000001;
+            limit += 0.0000001;
         }
     }
 )
