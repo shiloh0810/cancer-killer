@@ -77,7 +77,7 @@ var limit = 1;
 forever(
     function(){
         for(var i=0; i<5; i++){
-            limit += 0.000008;
+            limit += 0.000001;
         }
     }
 )
