@@ -6,9 +6,9 @@ function transplantation() {
 
     cells.forEach(function(c){
         c.status=0;
-    })
+    }) //cahnge the status before the for-loop that undergoes transplantation
         
-    //change cell one by one
+    //change cells one by one
     tower.forever(function(){
         i ++;
         if(i>cells.length) tower.destroy();
