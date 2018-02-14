@@ -6,7 +6,7 @@ function transplantation() {
 
     cells.forEach(function(c){
         c.status=0;
-    }) //cahnge the status before the for-loop that undergoes transplantation
+    }) //change the status before the for-loop that undergoes transplantation
         
     //change cells one by one
     tower.forever(function(){
